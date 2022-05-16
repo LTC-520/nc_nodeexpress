@@ -11,13 +11,13 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
-/*app.use('/:campsitesId', campsiteRouter,);*/
+
 app.use('/campsite', campsiteRouter);
 
-/*app.use('/:promotionId', promotionRouter);*/
+
 app.use('/promotion', promotionRouter);
 
-/*app.use('/:partnerId', partnerRouter);*/
+
 app.use('/partner', partnerRouter);
 
 app.use(express.static(__dirname + '/public'));
